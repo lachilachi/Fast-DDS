@@ -26,7 +26,7 @@
 using namespace eprosima;
 using namespace fastrtps;
 using namespace rtps;
-int main(int argc, char** argv)
+int main(int argc, char** argv)     //启动时输入pub或sub选择端，储存在数组argv的第一个元素中
 {
     std::cout << "Starting "<< std::endl;
     int type = 1;
@@ -34,18 +34,20 @@ int main(int argc, char** argv)
     long sleep = 100;
     if(argc > 1)
     {
+        //服务器端行为
         if(strcmp(argv[1],"publisher")==0)
         {
             type = 1;
             if (argc >= 3)
             {
-                count = atoi(argv[2]);
+                count = atoi(argv[2]); //atoi将字符串转换为整数
                 if (argc == 4)
                 {
                     sleep = atoi(argv[3]);
                 }
             }
         }
+        //客户端行为
         else if(strcmp(argv[1],"subscriber")==0)
             type = 2;
     }
@@ -58,15 +60,17 @@ int main(int argc, char** argv)
 
     switch(type)
     {
+        //服务器
         case 1:
             {
-                HelloWorldPublisher mypub;
+                HelloWorldPublisher mypub;  //创建一个服务器实例：mypub
                 if(mypub.init())
                 {
-                    mypub.run(count, sleep);
+                    mypub.run(count, sleep);  //运行run()函数，带参数，10，100
                 }
                 break;
             }
+        //客户端
         case 2:
             {
                 HelloWorldSubscriber mysub;

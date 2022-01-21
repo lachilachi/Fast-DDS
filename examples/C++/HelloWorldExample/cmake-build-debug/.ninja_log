@@ -1,0 +1,7 @@
+# ninja log v5
+0	1902	1642457203799731481	CMakeFiles/HelloWorldExample.dir/HelloWorld.cxx.o	673bf8fd8d5082e2
+0	7826	1642457209727444859	CMakeFiles/HelloWorldExample.dir/HelloWorldPubSubTypes.cxx.o	4202914c7929fa1f
+1904	10222	1642457212115330693	CMakeFiles/HelloWorldExample.dir/HelloWorldPublisher.cpp.o	857b3361aba69a68
+7826	14193	1642457216091142266	CMakeFiles/HelloWorldExample.dir/HelloWorldSubscriber.cpp.o	cedf3e0e0b2426e5
+10223	14236	1642457216135140195	CMakeFiles/HelloWorldExample.dir/HelloWorld_main.cpp.o	a9410e59687ee7c4
+14236	14913	1642457216811108370	HelloWorldExample	50c7ad0dacd01849
